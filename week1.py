@@ -13,6 +13,10 @@ print("sold before residential:", len(sold))
 sold_residential = sold[sold["PropertyType"] == "Residential"]
 print("sold after residential:", len(sold_residential))
 
+sold.to_csv(
+    "CRMLSSold_Combined.csv",
+    index=False
+)
 sold_residential.to_csv(
     "CRMLSSold_Combined_Residential.csv",
     index=False
@@ -30,6 +34,10 @@ print("listing before residential:", len(listing))
 listing_residential = listing[listing["PropertyType"] == "Residential"]
 print("listing after residential:", len(listing_residential))
 
+listing.to_csv(
+    "CRMLSListing_Combined.csv",
+    index=False
+)
 listing_residential.to_csv(
     "CRMLSListing_Combined_Residential.csv",
     index=False
