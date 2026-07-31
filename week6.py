@@ -126,7 +126,6 @@ county_summary.to_csv(
     "County_Market_Summary.csv",
     index=False
 )
-
 # save altered dataset
 sold.to_csv(
     "CRMLSSold_Feature_Engineered.csv",
