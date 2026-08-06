@@ -190,24 +190,6 @@ listings["negative_timeline_flag"] = (
         listings["ListingContractDate"]
     )
 )
-listings["listing_after_close_flag"] = (
-    listings["ListingContractDate"].notna() &
-    listings["CloseDate"].notna() &
-    (listings["ListingContractDate"] > listings["CloseDate"])
-)
-listings["purchase_after_close_flag"] = (
-    listings["PurchaseContractDate"].notna() &
-    listings["CloseDate"].notna() &
-    (listings["PurchaseContractDate"] > listings["CloseDate"])
-)
-listings["negative_timeline_flag"] = (
-    listings["ListingContractDate"].notna() &
-    listings["PurchaseContractDate"].notna() &
-    (
-        listings["PurchaseContractDate"] <
-        listings["ListingContractDate"]
-    )
-)
 
 # geographic data check
 sold["missing_coordinates_flag"] = (
@@ -278,6 +260,7 @@ sold.to_csv(
 )
 listings.to_csv(
     "CRMLSListing_Flagged.csv",
+    index=False
 )
 
 # clean dataset as new csv

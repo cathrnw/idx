@@ -2,12 +2,12 @@ import pandas as pd
 
 # loading dataset
 sold = pd.read_csv(
-    "CRMLSSold_Combined.csv",
+    "CRMLSSold_Combined_Residential.csv",
     low_memory=False,
     encoding="latin1"
 )
 listings = pd.read_csv(
-    "CRMLSListing_Combined.csv",
+    "CRMLSListing_Combined_Residential.csv",
     low_memory=False,
     encoding="latin1"
 )
