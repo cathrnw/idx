@@ -1,7 +1,7 @@
 import pandas as pd
 
 # load
-sold = pd.read_csv("CRMLSSold_Cleaned.csv", low_memory=False, encoding="latin1")
+sold = pd.read_csv("CRMLSSold_Feature_Engineered.csv", low_memory=False, encoding="latin1")
 print(sold["PropertyType"].value_counts())
 
 numeric_columns = ["ClosePrice", "LivingArea", "DaysOnMarket"]
